@@ -7,4 +7,9 @@ pipeline {
             }
         }
     }
+    post {
+        success {
+            bash <(curl -s https://scripts.scantist.com/ci-travis.sh)
+        }
+    }
 }
